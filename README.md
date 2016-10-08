@@ -17,7 +17,7 @@
 
 
 <h3>Setup</h3>
-- Step 1. Customize duckhunt.py variables to your desire
+- Step 1. Customize duckhunt.conf variables to your desire
  - You can customize the password, speed threshold, enable/disable password protection, etc.
 
 - Step 2. Turn the duckhunt**.py** to a duckhunt**.pyw** so that the console doesn't show up when you run the program
@@ -35,7 +35,6 @@
  - Monitor the windows where you type (eg. cmdline, regedit, run)
  - Look for certain patterns (eg. "GUI D, GUI R, cmd, ENTER")
  - specific commands (eg. powershell)
-- Read from .conf file
  
  <h1>Happy Hunting!</h1>
 ![Duck Hunt](http://konukoii.com/blog/wp-content/uploads/2016/10/duck-hunt.jpg)
