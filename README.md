@@ -17,7 +17,6 @@
 
 
 <h3>Setup</h3>
-t
 - Step 1. Customize duckhunt.py variables to your desire
  - You can customize the password, speed threshold, enable/disable password protection, etc.
 
