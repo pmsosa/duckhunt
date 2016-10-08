@@ -35,6 +35,7 @@
  - Monitor the windows where you type (eg. cmdline, regedit, run)
  - Look for certain patterns (eg. "GUI D, GUI R, cmd, ENTER")
  - specific commands (eg. powershell)
+- Discrete Protection: When attacked, ignore/inject 1 letter (for every n letters) to throw off any pre-programed attack.
  
  <h1>Happy Hunting!</h1>
 ![Duck Hunt](http://konukoii.com/blog/wp-content/uploads/2016/10/duck-hunt.jpg)
