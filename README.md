@@ -17,7 +17,7 @@
 
 
 <h3>Setup</h3>
-
+t
 - Step 1. Customize duckhunt.py variables to your desire
  - You can customize the password, speed threshold, enable/disable password protection, etc.
 
@@ -28,8 +28,8 @@
 - Step 4. Run the program. You are now protected from RubberDuckies!
 
 <h3>Current Features</h3>
-- Basic Ducky Protection: If a rubber ducky is detected, all keystrokes deemed to be from the ducky will be ignored.
-- Password Protection : If enabled, once a rubber ducky attack is detected, any and all future keystrokes will be ignored until a (specified) password is entered.
+- **Basic Ducky Protection:** If a rubber ducky is detected, all keystrokes deemed to be from the ducky will be ignored.
+- **Password Protection:** If enabled, once a rubber ducky attack is detected, any and all future keystrokes will be ignored until a (specified) password is entered.
 
 <h3>TODO</h3>
 - More monitoring features: 
