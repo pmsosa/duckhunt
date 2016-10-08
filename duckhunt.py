@@ -13,7 +13,8 @@ import os
 import shutil
 from time import gmtime, strftime
 from sys import stdout
-
+import imp
+duckhunt = imp.load_source('duckhunt', 'duckhunt.conf')
 
 ##### NOTES #####
 #
@@ -31,20 +32,17 @@ from sys import stdout
 
 
 
-### USER CONFIGURABLE ###
-threshold   = 30        # Speed Threshold between keystrokes (Default: ~30 Miliseconds) | Anything faster than this is suspicious.
-size        = 25        # Size of Vector that holds the history of keystroke speeds (Default: 25 Keystokes)
-pwdprotect  = True      # Turn Password Protection On/Off
-password    = "QUACK"   # The password you are going to use to recover keyboard control
-#########################
 
-
-pcounter  = 0           # Password Counter (If using password)
-speed     = 0           # Speed
-prevTime  = -1          # Previous Keypress Timestamp
-i         = 0           # Vector Timeslot
-intrusion = False       # Boolean Flag to be raised in case of intrusion detection
-vector    = [threshold+1] * size #Array for keeping track of average speeds across the last n keypresses
+threshold  = duckhunt.threshold   # Speed Threshold
+size       = duckhunt.size        # Size of history array
+pwdprotect = duckhunt.pwdprotect  # Enable/Disable Password Protection Feature
+password   = duckhunt.password    # Password used in Password Protection mode
+pcounter   = 0                    # Password Counter (If using password)
+speed      = 0                    # Current Average Keystroke Speed
+prevTime   = -1                   # Previous Keypress Timestamp
+i          = 0                    # History Array Timeslot
+intrusion  = False                # Boolean Flag to be raised in case of intrusion detection
+history    = [threshold+1] * size #Array for keeping track of average speeds across the last n keypresses
 
 
 
@@ -53,7 +51,7 @@ vector    = [threshold+1] * size #Array for keeping track of average speeds acro
 def KeyStroke(event):
 
     global threshold, pwdprotect, password, pcounter
-    global speed, prevTime, i, vector, intrusion
+    global speed, prevTime, i, history, intrusion
 
 
     #If an intrusion was detected and we are password protecting
@@ -78,13 +76,13 @@ def KeyStroke(event):
         return True
 
 
-    if (i >= len(vector)): i = 0;
+    if (i >= len(history)): i = 0;
 
     #TypeSpeed = NewKeyTime - OldKeyTime
-    vector[i] = event.Time - prevTime
-    print event.Time,"-",prevTime,"=",vector[i]
+    history[i] = event.Time - prevTime
+    print event.Time,"-",prevTime,"=",history[i]
     prevTime = event.Time
-    speed = sum(vector) / float(len(vector))
+    speed = sum(history) / float(len(history))
     i=i+1
 
     print "\rAverage Speed:",speed
