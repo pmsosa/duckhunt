@@ -38,6 +38,7 @@
 - [PyHook](https://sourceforge.net/projects/pyhook/)
 - [Py2Exe](http://py2exe.org/)
 
+
 <h3>Advanced Setup</h3>
 - Step 1. Customize duckhunt.conf variables to your desire
  - You can customize the password, speed threshold, privacy, etc.
@@ -52,6 +53,7 @@
 - More monitoring features: 
  - Add OSX & Linux support!
  - Look for certain patterns (eg. "GUI D, GUI R, cmd, ENTER")
+
  
  <h1>Happy Hunting!</h1>
 ![Duck Hunt](http://konukoii.com/blog/wp-content/uploads/2016/10/duck-hunt.jpg)
