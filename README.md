@@ -9,7 +9,7 @@
 
 **DuckHunt** is a small efficient script that acts as a daemon consistently monitoring your keyboard usage (right now, speed and selected window) that can catch and prevent a rubber ducky attack. (Technically it helps prevent any type of automated keystroke injection attack, so things like Mousejack injections are also covered.)
 
-
+![](http://konukoii.com/blog/wp-content/uploads/2016/10/duckhunt-screenshot.png)
 
 <h3>Features</h3>
 **Protection Policy**
@@ -22,7 +22,7 @@
  - Program Blacklist: If there are specific programs you neve use (cmd, powershell). Consider interactions with them as highly suspecious and take action based on the protection policy.
 
 <h3>Setup</h3>
-- **Regular users**:
+**Regular users**:
 - Choose and download one of the two options that best suits you:
  - Opt #1: [Normal Protection w/ Program Blacklisting for Commandline and Powershell](https://github.com/pmsosa/duckhunt/raw/master/builds/duckhunt.0.9.blacklist.exe)
  - Opt #2: [Normal Protection (w/o any blacklisting)](https://github.com/pmsosa/duckhunt/raw/master/builds/duckhunt.0.9.exe)
@@ -31,7 +31,7 @@
  - In Windows 10: Open a directory explorer an go to "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup" (copy paste it in without the quotation marks).
 
 
-- **Advanced Users**
+**Advanced Users**
  - Keep Reading...
 
 <h3>Requirements</h3>
