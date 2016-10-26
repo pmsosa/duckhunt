@@ -2,7 +2,7 @@
 <h3>Prevent RubberDucky (or other keystroke injection) attacks</h3>
 <hr>
 
-**Post-Mortem for this program soon to be posted on my [blog](http://www.konukoii.com/blog)**
+**Read this program's postmortem at my [blog](http://konukoii.com/blog/2016/10/26/duckhunting-stopping-automated-keystroke-injection-attacks/)**
 
 <h3>Intro</h3>
 [Rubberduckies](https://hakshop.myshopify.com/products/usb-rubber-ducky-deluxe) are small usb devices that pretend to be usb keyboards and can type on their own at very high speeds. Because most -if not all- OS trust keyboards automatically, it is hard to protect oneself from these attacks.
