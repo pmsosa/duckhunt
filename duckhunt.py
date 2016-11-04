@@ -39,6 +39,7 @@ threshold  = duckhunt.threshold      # Speed Threshold
 size       = duckhunt.size           # Size of history array
 policy     = duckhunt.policy.lower() # Designate Policy Type
 password   = duckhunt.password       # Password used in Paranoid Mode
+allow_auto_type_software = duckhunt.allow_auto_type_software #Allow AutoType Software (eg. KeyPass or LastPass)
 ################################################################################
 pcounter   = 0                       # Password Counter (If using password)
 speed      = 0                       # Current Average Keystroke Speed
@@ -74,6 +75,7 @@ def caught(event):
     print "Quack! Quack! -- Time to go Duckhunting!"
     intrusion = True;
 
+    
     #Paranoid Policy
     if (policy == "paranoid"):
         win32ui.MessageBox("Someone might be trying to inject keystrokes into your computer.\nPlease check your ports or any strange programs running.\nEnter your Password to unlock keyboard.", "KeyInjection Detected",4096) # MB_SYSTEMMODAL = 4096 -- Always on top.
@@ -106,8 +108,14 @@ def KeyStroke(event):
     global speed, prevTime, i, history, intrusion,blacklist
 
     print event.Key;
-
-
+    print event.Message;
+    print "Injected",event.Injected;
+    
+    if (event.Injected != 0 and allow_auto_type_software):
+        print "Injected by Software"
+        return True;
+    
+    
     #If an intrusion was detected and we are password protecting
     #Then lockdown any keystroke and until password is entered
     if (policy == "paranoid" and intrusion):    

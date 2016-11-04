@@ -20,7 +20,8 @@
 
 **Extras**
  - Program Blacklist: If there are specific programs you neve use (cmd, powershell). Consider interactions with them as highly suspecious and take action based on the protection policy.
-
+ - Support for AutoType software (eg. KeePass, LastPass, Breevy)
+ 
 <h3>Setup</h3>
 **Regular users**:
 - Choose and download one of the two options that best suits you:
@@ -33,6 +34,7 @@
 
 **Advanced Users**
  - Keep Reading...
+ - Feel Free to contact me, add issues, fork, and get involved with this project :). Together we can make a stronger tool!
 
 <h3>Requirements</h3>
  
