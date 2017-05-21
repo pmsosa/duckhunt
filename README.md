@@ -5,6 +5,7 @@
 **Read this program's postmortem at my [blog](http://konukoii.com/blog/2016/10/26/duckhunting-stopping-automated-keystroke-injection-attacks/)**
 
 <h3>Intro</h3>
+
 [Rubberduckies](https://hakshop.myshopify.com/products/usb-rubber-ducky-deluxe) are small usb devices that pretend to be usb keyboards and can type on their own at very high speeds. Because most -if not all- OS trust keyboards automatically, it is hard to protect oneself from these attacks.
 
 **DuckHunt** is a small efficient script that acts as a daemon consistently monitoring your keyboard usage (right now, speed and selected window) that can catch and prevent a rubber ducky attack. (Technically it helps prevent any type of automated keystroke injection attack, so things like Mousejack injections are also covered.)
@@ -12,6 +13,7 @@
 ![](http://konukoii.com/blog/wp-content/uploads/2016/10/duckhunt-screenshot.png)
 
 <h3>Features</h3>
+
 **Protection Policy**
  - **Paranoid:** When an attack is detected, keyboard input is disallowed until a password is input. Attack will also be logged.
  - **Normal:** When an attack is detected, keyboard input will temporarily be disallowed. (After it is deemed that the treat is over, keyboard input will be allowed again). Attack will also be logged.
@@ -23,13 +25,14 @@
  - Support for AutoType software (eg. KeePass, LastPass, Breevy)
  
 <h3>Setup</h3>
+
 **Regular users**:
 - Choose and download one of the two options that best suits you:
- - Opt #1: [Normal Protection w/ Program Blacklisting for Commandline and Powershell](https://github.com/pmsosa/duckhunt/raw/master/builds/duckhunt.0.9.blacklist.exe)
- - Opt #2: [Normal Protection (w/o any blacklisting)](https://github.com/pmsosa/duckhunt/raw/master/builds/duckhunt.0.9.exe)
+  -  Opt #1: [Normal Protection w/ Program Blacklisting for Commandline and Powershell](https://github.com/pmsosa/duckhunt/raw/master/builds/duckhunt.0.9.blacklist.exe)
+  -  Opt #2: [Normal Protection (w/o any blacklisting)](https://github.com/pmsosa/duckhunt/raw/master/builds/duckhunt.0.9.exe)
 - Now, copy the .exe above to the startup menu.
- - In Windows XP,Vista,7 : This folder should be accessible from your Start Menu
- - In Windows 10: Open a directory explorer an go to "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup" (copy paste it in without the quotation marks).
+  -  In Windows XP,Vista,7 : This folder should be accessible from your Start Menu
+  -  In Windows 10: Open a directory explorer an go to "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup" (copy paste it in without the quotation marks).
 
 
 **Advanced Users**
@@ -44,20 +47,20 @@
 
 
 <h3>Advanced Setup</h3>
+
 - Step 1. Customize duckhunt.conf variables to your desire
- - You can customize the password, speed threshold, privacy, etc.
-
+  -  You can customize the password, speed threshold, privacy, etc.
 - Step 2. Turn the duckhunt**.py** to a duckhunt**.pyw** so that the console doesn't show up when you run the program
-
 - Step 3. (opt) Use Py2Exe to create an executable.
-
 - Step 4. Run the program. You are now protected from RubberDuckies!
 
 <h3>TODO</h3>
+
 - More monitoring features: 
  - Add OSX & Linux support!
  - Look for certain patterns (eg. "GUI D, GUI R, cmd, ENTER")
 
  
  <h1>Happy Hunting!</h1>
-![Duck Hunt](http://konukoii.com/blog/wp-content/uploads/2016/10/duck-hunt.jpg)
+ 
+![](http://konukoii.com/blog/wp-content/uploads/2016/10/duck-hunt.jpg)
