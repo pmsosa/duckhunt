@@ -44,6 +44,9 @@
 - [PyWin32](http://starship.python.net/~skippy/win32/Downloads.html)
 - [PyHook](https://sourceforge.net/projects/pyhook/)
 - [Py2Exe](http://py2exe.org/)
+- [webbrowser](https://docs.python.org/2/library/webbrowser.html)
+
+
 
 
 <h3>Advanced Setup</h3>
