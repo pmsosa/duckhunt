@@ -1,4 +1,3 @@
-Welcome to the duckhunt wiki!
 <h1>DuckHunter</h1>
 <h3>Prevent RubberDucky (or other keystroke injection) attacks</h3>
 <h3>Try Out the new setup GUI it helps you to setup the software and we have just released a new feature that allows you to run the script every time your computer starts automatically<h3>
@@ -58,7 +57,7 @@ Welcome to the duckhunt wiki!
 
 - Step 1. Customize duckhunt.conf variables to your desire
   -  You can customize the password, speed threshold, privacy, etc.
-- Step 2. Turn the duckhunt**.py** to a duckhunt**.pyw** so that the console doesn't show up when you run the program
+- Step 2. Turn the duckhunt-configurable**.py** to a duckhunt-configurable**.pyw** so that the console doesn't show up when you run the program
 - Step 3. (opt) Use Py2Exe to create an executable.
 - Step 4. Run the program. You are now protected from RubberDuckies!
 
