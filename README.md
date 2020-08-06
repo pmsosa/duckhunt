@@ -1,11 +1,15 @@
 <h1>DuckHunter</h1>
 <h3>Prevent RubberDucky (or other keystroke injection) attacks</h3>
-<hr>
+<h3>Try Out the new setup GUI it helps you to setup the software and we have just released a new feature that allows you to run the script every time your computer starts automatically<h3>
+
+
+
+
+![](https://raw.githubusercontent.com/kai9987kai/kai9987kai.github.io/master/screenshot.PNG)
+
 
 **Read this program's postmortem at my [blog](http://konukoii.com/blog/2016/10/26/duckhunting-stopping-automated-keystroke-injection-attacks/)**
-
 <h3>Intro</h3>
-
 [Rubberduckies](https://hakshop.myshopify.com/products/usb-rubber-ducky-deluxe) are small usb devices that pretend to be usb keyboards and can type on their own at very high speeds. Because most -if not all- OS trust keyboards automatically, it is hard to protect oneself from these attacks.
 
 **DuckHunt** is a small efficient script that acts as a daemon consistently monitoring your keyboard usage (right now, speed and selected window) that can catch and prevent a rubber ducky attack. (Technically it helps prevent any type of automated keystroke injection attack, so things like Mousejack injections are also covered.)
@@ -44,13 +48,16 @@
 - [PyWin32](http://starship.python.net/~skippy/win32/Downloads.html)
 - [PyHook](https://sourceforge.net/projects/pyhook/)
 - [Py2Exe](http://py2exe.org/)
+- [webbrowser](https://docs.python.org/2/library/webbrowser.html)
+
+
 
 
 <h3>Advanced Setup</h3>
 
 - Step 1. Customize duckhunt.conf variables to your desire
   -  You can customize the password, speed threshold, privacy, etc.
-- Step 2. Turn the duckhunt**.py** to a duckhunt**.pyw** so that the console doesn't show up when you run the program
+- Step 2. Turn the duckhunt-configurable**.py** to a duckhunt-configurable**.pyw** so that the console doesn't show up when you run the program
 - Step 3. (opt) Use Py2Exe to create an executable.
 - Step 4. Run the program. You are now protected from RubberDuckies!
 
